@@ -1,3 +1,5 @@
+/* eslint-disable prefer-template */
+
 module.exports = {
   entry: [
     './client/index.js',

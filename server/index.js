@@ -1,10 +1,11 @@
+/* eslint-disable no-console */
+
 import express from 'express';
 
 const app = express();
 app.use(express.static(`${__dirname}/../public`));
 
 app.get('/', (req, res) => {
-  console.log('Hello world!');
   res.sendfile(`${__dirname}/../public/index.html`);
 });
 
