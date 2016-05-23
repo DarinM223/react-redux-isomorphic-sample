@@ -14,13 +14,10 @@ export default function SudokuBoardComponent({ grid, onCellChange }) {
         number={number}
         isErr={isErr}
         onNumberChange={onNumberChange}
-        key={idGenerator}
+        key={idGenerator++}
       />);
-      idGenerator++;
     }
-
-    renderGrid.push(<br key={idGenerator} />);
-    idGenerator++;
+    renderGrid.push(<br key={idGenerator++} />);
   }
 
   return (
