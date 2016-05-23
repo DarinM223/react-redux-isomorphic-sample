@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { grid } from './grid.js';
+import { board } from './board.js';
 
 const rootReducer = combineReducers({
-  grid,
+  board,
 });
 
 export default rootReducer;

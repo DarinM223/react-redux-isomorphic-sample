@@ -1,13 +1,14 @@
 import React, { PropTypes } from 'react';
 import SudokuSquareComponent from './SudokuSquareComponent.js';
 
-export default function SudokuBoardComponent({ grid, onCellChange }) {
+export default function SudokuBoardComponent({ board, onCellChange }) {
   const renderGrid = [];
   let idGenerator = 0;
-  for (let i = 0; i < grid.length; i++) {
-    const row = grid[i];
-    for (let j = 0; j < row.length; j++) {
-      const { number, isErr } = row[j];
+  const grid = board.get('grid');
+  for (let i = 0; i < grid.size; i++) {
+    const row = grid.get(i);
+    for (let j = 0; j < row.size; j++) {
+      const { number, isErr } = row.get(j).toJS();
       const onNumberChange = onCellChange.bind(null, i, j);
 
       renderGrid.push(<SudokuSquareComponent
@@ -28,9 +29,6 @@ export default function SudokuBoardComponent({ grid, onCellChange }) {
 }
 
 SudokuBoardComponent.propTypes = {
-  grid: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.shape({
-    number: PropTypes.string.isRequired,
-    isErr: PropTypes.bool,
-  }))).isRequired,
+  board: PropTypes.object.isRequired,
   onCellChange: PropTypes.func.isRequired,
 };

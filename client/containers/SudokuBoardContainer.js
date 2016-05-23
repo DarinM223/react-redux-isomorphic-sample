@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import { editCell } from '../actions/grid.js';
+import { editCell } from '../actions/board.js';
 import SudokuBoardComponent from '../components/SudokuBoardComponent.js';
 
 function mapStateToProps(state) {
   return {
-    grid: state.grid,
+    board: state.board,
   };
 }
 
