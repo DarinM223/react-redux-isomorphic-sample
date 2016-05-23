@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-isomorphic-sample",
+  "name": "sudoku-redux",
   "version": "1.0.0",
-  "description": "Sample react redux configuration",
+  "description": "Sudoku in React and Redux",
   "main": "index.js",
   "scripts": {
     "start": "babel-node server/index.js",

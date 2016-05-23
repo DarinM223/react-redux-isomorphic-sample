@@ -1,7 +1,7 @@
-react-redux-isomorphic-sample
-=============================
+sudoku-redux
+============
 
-Sample configuration for a React app
+Sudoku in React and Redux
 
 - React
 - Redux
