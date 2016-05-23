@@ -3,8 +3,10 @@ import SudokuSquareComponent from './SudokuSquareComponent.js';
 
 export default function SudokuBoardComponent({ board, onCellChange }) {
   const renderGrid = [];
-  let idGenerator = 0;
   const grid = board.get('grid');
+  const won = board.get('won') === true ? 'true' : 'false';
+  let idGenerator = 0;
+
   for (let i = 0; i < grid.size; i++) {
     const row = grid.get(i);
     for (let j = 0; j < row.size; j++) {
@@ -23,6 +25,7 @@ export default function SudokuBoardComponent({ board, onCellChange }) {
 
   return (
     <div>
+      <p>Won: {won}</p>
       {renderGrid}
     </div>
   );
