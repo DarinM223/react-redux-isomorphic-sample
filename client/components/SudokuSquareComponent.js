@@ -23,7 +23,7 @@ export default function SudokuSquareComponent({ number, isErr, onNumberChange })
 
   let textFieldStyle = styles.square;
   if (isErr === true) {
-    textFieldStyle = { ...styles.square, color: 'red' };
+    textFieldStyle = { ...styles.square, color: 'white', background: 'red' };
   }
 
   return <input style={textFieldStyle} type="text" value={number} onChange={onTextChange} />;
