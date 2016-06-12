@@ -9,17 +9,13 @@ export const RESTART_GRID = 'RESTART_GRID';
  * Action creators
  */
 
-export function editCell(i, j, numCh) {
-  return {
-    type: EDIT_CELL,
-    row: i,
-    col: j,
-    number: numCh,
-  };
-}
+export const editCell = (i, j, numCh) => ({
+  type: EDIT_CELL,
+  row: i,
+  col: j,
+  number: numCh,
+});
 
-export function restartGrid() {
-  return {
-    type: RESTART_GRID,
-  };
-}
+export const restartGrid = () => ({
+  type: RESTART_GRID,
+});
