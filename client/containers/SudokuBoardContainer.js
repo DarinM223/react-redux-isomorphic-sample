@@ -3,7 +3,8 @@ import { editCell } from '../actions/board.js';
 import SudokuBoardComponent from '../components/SudokuBoardComponent.js';
 
 const mapStateToProps = (state) => ({
-  board: state.board,
+  grid: state.board.get('grid'),
+  won: state.board.get('won'),
 });
 
 const mapDispatchToProps = (dispatch) => ({

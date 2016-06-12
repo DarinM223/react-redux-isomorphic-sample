@@ -1,4 +1,5 @@
 import React from 'react';
+import SudokuButtonContainer from './containers/SudokuButtonContainer.js';
 import SudokuBoardContainer from './containers/SudokuBoardContainer.js';
 
 /**
@@ -6,6 +7,7 @@ import SudokuBoardContainer from './containers/SudokuBoardContainer.js';
  */
 const App = () => (
   <div>
+    <SudokuButtonContainer />
     <SudokuBoardContainer />
   </div>
 );

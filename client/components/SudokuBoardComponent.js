@@ -8,10 +8,9 @@ const styles = {
   },
 };
 
-export default function SudokuBoardComponent({ board, onCellChange }) {
+export default function SudokuBoardComponent({ won, grid, onCellChange }) {
   const components = [];
-  const grid = board.get('grid');
-  const won = board.get('won') === true ? 'true' : 'false';
+  const wonText = won === true ? 'true' : 'false';
   let idGenerator = 0;
 
   for (let i = 1; i <= 9; i++) {
@@ -28,13 +27,14 @@ export default function SudokuBoardComponent({ board, onCellChange }) {
 
   return (
     <div>
-      <p>Won: {won}</p>
+      <p>Won: {wonText}</p>
       {components}
     </div>
   );
 }
 
 SudokuBoardComponent.propTypes = {
-  board: PropTypes.object.isRequired,
+  grid: PropTypes.object.isRequired,
+  won: PropTypes.bool.isRequired,
   onCellChange: PropTypes.func.isRequired,
 };

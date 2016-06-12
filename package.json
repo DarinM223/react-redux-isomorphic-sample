@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node server/index.js",
-    "start-dev": "nodemon --exec 'babel-node server/index.js' & webpack --watch",
+    "start-dev": "nodemon server/index.js & webpack --watch",
     "build": "webpack -p --progress --colors",
     "lint": "eslint --ext .js,.jsx .; exit 0",
     "test": "mocha --compilers js:babel-core/register"
